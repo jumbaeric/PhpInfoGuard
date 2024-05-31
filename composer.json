@@ -1,5 +1,5 @@
 {
-    "name": "yourname/phpinfoguard",
+    "name": "jumbaeric/phpinfoguard",
     "description": "A package to globally protect the phpinfo() command.",
     "type": "library",
     "autoload": {
