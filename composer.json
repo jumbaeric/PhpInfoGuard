@@ -1,0 +1,22 @@
+{
+    "name": "yourname/phpinfoguard",
+    "description": "A package to globally protect the phpinfo() command.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "PhpInfoGuard\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "PhpInfoGuard\\PhpInfoGuard::enable",
+            "php scripts/update_php_ini.php"
+        ],
+        "post-update-cmd": [
+            "php scripts/update_php_ini.php"
+        ]
+    }
+}
